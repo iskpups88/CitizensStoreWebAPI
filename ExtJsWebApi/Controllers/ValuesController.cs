@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite.Internal.UrlActions;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ExtJsWebApi.Controllers
 {
@@ -12,9 +14,9 @@ namespace ExtJsWebApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Redirect("~/CitizenStore/index.html");
         }
 
         // GET api/values/5
