@@ -41,6 +41,8 @@ namespace ExtJsWebApi
             }
 
             app.UseHttpsRedirection();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
